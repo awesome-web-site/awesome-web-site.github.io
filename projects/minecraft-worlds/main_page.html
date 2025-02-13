@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft MAPS</title>
+    <link href="https://fonts.cdnfonts.com/css/minecraft-4" rel="stylesheet">
+	<link rel="icon" href="fav.png" type="image/x-icon">
+    <style>
+
+        body {
+            margin: 0;
+            font-family: 'Minecraft', sans-serif;
+            background-color: #87ceeb; /* Kolor nieba */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('wallpaper.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.4);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .button {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+		
+        }
+
+        .button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            opacity: 0.7;
+            z-index: -1;
+        }
+
+        .button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .overworld::before {
+            background-image: url(grass_block.jpg);
+        }
+
+        .nether::before {
+            background-image: url(grass_block.jpg);
+        }
+
+        .end::before {
+            background-image: url(grass_block.jpg);
+        }
+
+        .custom::before {
+            background-image: url(end.jpg);
+        }
+
+        @media (max-width: 600px) {
+            .button {
+                width: 100px;
+                height: 100px;
+                line-height: 100px;
+                font-size: 1em;
+            }
+
+            h1 {
+                font-size: 4em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+	<h1>MINECRAFT</h1>
+        <h2>PICK THE WORLD</h2>
+        <div class="buttons">
+            <a href="https://awesome-web-site.github.io/projects/minecraft-worlds/map-28.08.2023-[overviewer]-(damaged,izometric)" class="button overworld">28.08.2023 MAP</a>
+            <a href="https://awesome-web-site.github.io/projects/minecraft-worlds/minecraft-save-04-01-24/" class="button nether">04.01.24 MAP</a>
+            <a href="https://awesome-web-site.github.io/projects/minecraft-worlds/minecraft-save-04-01-24-ver2-grid/" class="button end">04.01.24 / 2 MAP</a>
+            <a href="https://awesome-web-site.github.io/projects/minecraft-worlds/END-MAP" class="button custom">UNMINED MAP END 4.01.2024</a>
+        </div>
+    </div>
+#    <script>
+#        // Przykładowy skrypt JavaScript do dodania efektu kliknięcia
+#        document.querySelectorAll('.button').forEach(button => {
+#            button.addEventListener('click', () => {
+#                alert(`Przenoszenie do ${button.textContent}...`);
+#            });
+#        });
+#    </script>
+</body>
+</html>
